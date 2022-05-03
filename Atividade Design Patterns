@@ -1,0 +1,25 @@
+package Alunos_Fatec;
+
+public class Main {
+
+
+	    public static void main(String[] args) {
+
+	        Aluno aluno = new Aluno( new MediaAritmetica());
+
+	        aluno.setN1(8);
+	        aluno.setN2(10);
+	        aluno.setNome("Bruno Candiota");
+
+	        aluno.setCalculoMedia(new MediaAritmetica());
+	        System.out.println(String.format("O aluno %s tem media aritimetica %f",aluno.getNome(),aluno.Media()));
+	        System.out.println(String.format(" O aluno foi %s", (aluno.Media()>5)? "aprovado!" : "reprovado"));
+
+
+	        aluno.setCalculoMedia(new MediaGeometrica());
+	        System.out.println(String.format("O aluno %s tem media geometrica %f",aluno.getNome(),aluno.Media()));
+	        System.out.println(String.format(" O aluno foi %s", (aluno.Media()>7)? "aprovado!" : "reprovado"));
+
+	    }
+	
+}
